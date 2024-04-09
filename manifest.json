@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Shorts Blocker",
+    "version": "1.0.3",
+    "description": "Blurs YouTube Shorts videos and mutes their audio.",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.youtube.com/shorts/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_icon": {},
+        "default_title": "YouTube Shorts Blocker"
+    }
+}
